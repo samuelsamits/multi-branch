@@ -3,6 +3,8 @@ FROM tomcat:9
 # Remove the default ROOT application
 RUN rm -rf /usr/local/tomcat/webapps/
 
+RUN npm install -g npm
+
 # Copy your Java WAR file to the container
 COPY target/onlinebookstore.war /usr/local/tomcat/webapps/
 
